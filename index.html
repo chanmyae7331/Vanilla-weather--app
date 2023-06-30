@@ -4,35 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>vanilla weather app</title>
-    <link rel="stylesheet" href="src/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="src/style.css">
 </head>
 <body>
-    <div class="parent">
+    
         <div class="container">
             <div class="weatherapp">
-                <form class="row">
-                    <div class="col-7">
-                        <input type="search" name="" id="" placeholder="Enter a city">
+                <form class="row mb-4">
+                    <div class="col-7 ">
+                        <input type="search" name="" id="" class="form-control search-input" placeholder="Enter a city">
                     </div>
                     <div class="col-3">
-                        <input type="submit" value="Search">
+                        <input type="submit" value="Search" class="btn btn-primary  search-button">
                     </div>
                 </form>
-        <div class="weather-info">
+        <div class="weather-info mb-4">
             <div class="row">
                 <div class="col-6">
-                    <h1>Yangon</h1>
+                    <h1 id="city">Yangon</h1>
                     <ul>
-                        <li>Thursday 19:53, broken clouds</li>
-                        <li>Humidity: 80%</li>
-                        <li>Wind: 3.6km/h</li>
+                        <li id="date">Thursday 19:53</li>
+                        <li>broken clouds</li>
                     </ul>
                 </div>
                 <div class="col-6">
-                    <img src="https://ssl.gstatic.com/onebox/weather/64/rain_light.png" alt="light rain">
-                    <strong>12°C | °F</strong>
+                    <img src="https://ssl.gstatic.com/onebox/weather/64/rain_light.png" alt="light rain" >
+                    <span id="temperature">12</span>
+                    <span id="units">
+                        °C | °F
+                    </span>
                 </div>
             </div>
         </div>
@@ -40,53 +42,51 @@
         <div class="forecast row">
             <div class="col">
                 <div>
-                    <li>Tuesday</li>
+                    <li >Tues</li>
                     <li>⛅</li>
                     <li>80°</li>
                 </div>
             </div>
             <div class="col">
                 <div>
-                    <li>Wednesday</li>
+                    <li>Wed</li>
                     <li>⛅</li>
                     <li>80°</li>
                 </div>
             </div>
             <div class="col">
                 <div>
-                    <li>Thursday</li>
+                    <li>Thurs</li>
                     <li>⛅</li>
                     <li>80°</li>
                 </div>
             </div>
             <div class="col">
                 <div>
-                    <li>Friday</li>
+                    <li>Fri</li>
                     <li>⛅</li>
                     <li>80°</li>
                 </div>
             </div>
             <div class="col">
                 <div>
-                    <li>Saturday</li>
+                    <li>Sat</li>
                     <li>⛅</li>
                     <li>80°</li>
                 </div>
             </div>
-            <div class="col">
-                <div>
-                    <li>Sunday</li>
-                    <li>⛅</li>
-                    <li>80°</li>
-                </div>
+            
+        </div>
+        
+            </div>
+            <div class="footer">
+                This project was coded by Chan Myae Myat Noe San 
+                <span>and is</span> <a
+                    href="https://github.com/chanmyae7331/Vanilla-weather--app" target="_blank" rel="noreferrer">open-sourced on
+                    Github</a> and <a href="">hosted on Netlify</a>
             </div>
         </div>
-        <div class="footer">
-            This project was coded by Chan Myae Myat Noe San and is <a href="https://github.com/chanmyae7331/Vanilla-weather--app" target="_blank" rel="noreferrer">open-sourced on Github</a> and <a href="">hosted on Netlify</a>
-        </div>
-            </div>
-        </div>
-    </div>
+    
     
     
     <script href="src/app.js"></script>

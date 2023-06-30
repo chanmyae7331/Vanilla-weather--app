@@ -1,3 +1,69 @@
-h1{
-    color:rgb(62, 212, 42);
+.container{
+    margin-top: 30px;
 }
+
+.weatherapp{
+    max-width: 700px;
+    margin: 20px auto;
+    padding:20px;
+    border:1px solid #dadde1;
+    border-radius: 5px;
+}
+h1{
+    color: #272142;
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 48px;
+    margin: 0 10px 20px;
+}
+.weather-info li{
+    color: rgba(39, 33, 66, .4);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    list-style: none;
+    margin-bottom: 5px;
+}
+#units {
+    position: relative;
+    top: -25px;
+}
+.search-input{
+        background: #f9f7fe;
+        border: none;
+        border-radius: 6px;
+        color: rgba(39, 33, 66, .4);
+        display: inline-block;
+        font-size: 16px;
+        height: 40px;
+        line-height: 20px;
+        padding: 15px 20px;
+}
+.search-button{
+    background-color: #4a44f0;
+    height:40px;
+    width:100px;
+}
+li{
+    list-style: none;
+}
+.forecast{
+    margin:30px
+}
+.footer{
+    text-align: center;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+#temperature{
+    color: #212121;
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 1;
+    margin-left: 10px;
+}
+
