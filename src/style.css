@@ -53,7 +53,7 @@ li{
 #humidity , #wind {
     color:#4065b4
 }
-#description{
+#description::first-letter{
     text-transform: capitalize;
 }
 .forecast{
