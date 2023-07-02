@@ -20,7 +20,7 @@ h1{
     margin: 0 10px 20px;
 }
 .weather-info li{
-    color: rgba(33, 32, 33, 0.4);
+    color: rgba(18, 1, 18, 0.663);
     font-size: 16px;
     font-weight: 500;
     line-height: 20px;
@@ -51,7 +51,7 @@ li{
     list-style: none;
 }
 #humidity , #wind {
-    color:#4065b4
+    color:#1c2945
 }
 #description::first-letter{
     text-transform: capitalize;
@@ -70,7 +70,7 @@ a:hover{
 }
 #temperature{
     color: #212121;
-    font-size: 40px;
+    font-size: 50px;
     font-weight: 600;
     line-height: 1;
     margin-left: 10px;
