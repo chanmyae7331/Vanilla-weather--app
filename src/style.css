@@ -5,7 +5,7 @@
 }
 
 .weatherapp{
-    max-width: 500px;
+    max-width: 600px;
     margin: 20px auto;
     padding:20px;
     border:1px solid #dadde1;
@@ -50,8 +50,11 @@ h1{
 li{
     list-style: none;
 }
-#humidity , #wind-speed {
+#humidity , #wind {
     color:#4065b4
+}
+#description{
+    text-transform: capitalize;
 }
 .forecast{
     margin:30px
@@ -67,7 +70,7 @@ a:hover{
 }
 #temperature{
     color: #212121;
-    font-size: 50px;
+    font-size: 40px;
     font-weight: 600;
     line-height: 1;
     margin-left: 10px;
