@@ -31,18 +31,18 @@ h1{
     position: relative;
     top: -25px;
 }
-.search-input{
+#search-input{
         background: white;
         border: none;
         border-radius: 6px;
-        color: rgba(39, 33, 66, .4);
+        color: rgba(43, 41, 54, 0.803);
         display: inline-block;
         font-size: 16px;
         height: 40px;
         line-height: 20px;
         padding: 15px 20px;
 }
-.search-button{
+#search-button{
     background-color: #2e66df;
     height:40px;
     width:100px;

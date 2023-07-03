@@ -21,10 +21,6 @@ function formatDate(timestamp){
     return `${day} ${hours}:${minutes}`;
 }
 
-
-
-
-
 function displayTemperature(response) {
 let temperatureElement= document.querySelector("#temperature");
 let cityElement = document.querySelector("#city");
@@ -44,10 +40,20 @@ iconElement.setAttribute("src",`https://openweathermap.org/img/wn/${response.dat
 iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
+function search(city){
+    let apiKey = "037821f5e82fed94604bbc6d80f916c2";
+    let apiUrl =`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
+    axios.get(apiUrl).then(displayTemperature);
+}
 
-let apiKey = "037821f5e82fed94604bbc6d80f916c2";
-let city = "Lisbon";
-let apiUrl =`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+function handleSubmit(event){
+    event.preventDefault();
+    let cityInputElement = document.querySelector("#search-input");
+    search(cityInputElement.value);
+}
 
-axios.get(apiUrl).then(displayTemperature);
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
+
+search("Yangon");
