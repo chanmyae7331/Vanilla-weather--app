@@ -75,4 +75,10 @@ a:hover{
     line-height: 1;
     margin-left: 10px;
 }
-
+.weather-info .active{
+    color:rgb(238, 18, 18);
+    cursor: default;
+}
+.weather-info .active:hover{
+    text-decoration: none;
+}
