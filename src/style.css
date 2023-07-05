@@ -1,16 +1,17 @@
-
+body{
+    background-color:aliceblue;
+}
 .container{
     margin-top: 30px;
-    
 }
 
 .weatherapp{
-    max-width: 600px;
+    max-width: 700px;
     margin: 20px auto;
     padding:20px;
     border:1px solid #dadde1;
     border-radius: 6px;
-    background-color: aliceblue;
+    background-color:rgb(252, 255, 255);
 }
 h1{
     color: #272142;
@@ -53,9 +54,7 @@ li{
 #humidity , #wind {
     color:#1c2945
 }
-#description::first-letter{
-    text-transform: capitalize;
-}
+
 .forecast{
     margin:30px
 }
@@ -81,4 +80,19 @@ a:hover{
 }
 .weather-info .active:hover{
     text-decoration: none;
+}
+.weather-forecast{
+    margin-top: 20px;
+    text-align: center;
+    color:black;
+}
+#weather-forecast-date{
+    font-size: 16px;
+    opacity: 0.5;
+}
+.weather-forecast-temperature{
+    font-size: 14px;
+}
+#weather-forecast-temperature-min{
+    opacity: 0.5;
 }

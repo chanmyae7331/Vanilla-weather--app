@@ -31,32 +31,55 @@
                         id=" search-button">
                     </div>
                 </form>
-        <div class="weather-info mb-4">
-            <div class="row">
-                <div class="col-7">
-                    <h1 id="city"></h1>
-                    <ul class="current-info">
-                        <li id="date"></li>
-                        <li id="description"></li>
-                        <li>
-                            Humidity: <span id="humidity"> </span> %
-                        </li>
-                        <li>
-                            Wind: <span id="wind"> </span> km/h
-                        </li>
-                    </ul>
+            <div class="weather-info mb-4">
+                <div class="row">
+                    <div class="col-7">
+                        <h1 id="city"></h1>
+                        <ul class="current-info">
+                            <li >
+                            <span id="date"></span>
+                            <span id="description"></span>
+                            </li>
+                        
+                            <li>
+                            <span>Humidity: <span id="humidity"> </span> %</span>
+                            <span>Wind: <span id="wind"> </span> km/h</span>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="col-5 weather-temperature">
+                        <img src=".." alt="light rain" id="icon">
+                        <span id="temperature"></span>
+                        <span id="units">
+                            <a href="" id="celsius-link" class="active">°C</a> | <a href="" id="fahrenheit-link">°F</a>
+                        </span>
+                    </div>
+
+                <div class="weather-forecast">
+                    <div class="row">
+                        <div class="col-2">
+                            <div id="weather-forecast-date">
+                                Thu
+                            </div>
+                            <div class="weather-forecast-icon">
+                                <img src="https://ssl.gstatic.com/onebox/weather/64/rain_light.png" alt="" width="45px">
+                            </div>
+                            <div class="weather-forecast-temperature">
+                                <span id="weather-forecast-temperature-max">
+                                    25°
+                                </span>
+                                <span id="weather-forecast-temperature-min">
+                                    18°
+                                </span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-5 weather-temperature">
-                    <img src=".." alt="light rain" id="icon">
-                    <span id="temperature"></span>
-                    <span id="units">
-                        <a href="" id="celsius-link" class="active">°C</a> | <a href="" id="fahrenheit-link">°F</a>
-                    </span>
+
                 </div>
             </div>
         </div>
-
-            </div>
             <div class="footer">
                 This project was coded by Chan Myae Myat Noe San 
                 <span>and is</span> <a
