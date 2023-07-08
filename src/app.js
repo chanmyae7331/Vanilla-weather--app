@@ -21,6 +21,39 @@ function formatDate(timestamp){
     return `${day} ${hours}:${minutes}`;
 }
 
+function displayForecast(){
+    let forecastElement = document.querySelector("#forecast");
+
+    let days = ["Mon", "Tue","Wed", "Thurs", "Fri","Sun"];
+
+    let forecastHTML = `<div class="row">`;
+    
+    days.forEach(function (day) {
+        forecastHTML= forecastHTML + 
+        `  
+            <div class="col-2">
+                <div id="weather-forecast-date">
+                    ${day}
+                </div>
+                <div class="weather-forecast-icon">
+                    <img src="https://ssl.gstatic.com/onebox/weather/64/rain_light.png" alt="" width="45px">
+                </div>
+                <div class="weather-forecast-temperature">
+                    <span id="weather-forecast-temperature-max">
+                        25°
+                    </span>
+                    <span id="weather-forecast-temperature-min">
+                        18°
+                    </span>
+                </div>
+            </div>
+    ` ;
+    });
+    
+    forecastHTML = forecastHTML + `</div>`;
+    forecastElement.innerHTML = forecastHTML;
+    console.log(forecastHTML);
+}
 function displayTemperature(response) {
 let temperatureElement= document.querySelector("#temperature");
 let cityElement = document.querySelector("#city");
@@ -53,7 +86,6 @@ function handleSubmit(event){
     let cityInputElement = document.querySelector("#search-input");
     search(cityInputElement.value);
 }
-search("Yangon");
 
 function showFahrenheitTemperature(event) {
     event.preventDefault();
@@ -83,3 +115,6 @@ let fahrenheitLink =document.querySelector("#fahrenheit-link");
 
  let celsiusLink =document.querySelector("#celsius-link");
  celsiusLink.addEventListener("click", showCelsiusTemperature);
+
+ search("Yangon");
+displayForecast();

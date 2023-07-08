@@ -14,6 +14,7 @@
     <div class="parent">
         <div class="container">
             <div class="weatherapp">
+
                 <form class="row mb-4 mt-3" id="search-form">
                     <div class="col-9 ">
                         <input 
@@ -31,8 +32,10 @@
                         id=" search-button">
                     </div>
                 </form>
-            <div class="weather-info mb-4">
-                <div class="row">
+
+            <div class="weather-info mt-3">
+
+                <div class="row currentCityWeatherInfo">
                     <div class="col-7">
                         <h1 id="city"></h1>
                         <ul class="current-info">
@@ -55,37 +58,40 @@
                             <a href="" id="celsius-link" class="active">°C</a> | <a href="" id="fahrenheit-link">°F</a>
                         </span>
                     </div>
+            </div>
 
-                <div class="weather-forecast">
-                    <div class="row">
-                        <div class="col-2">
-                            <div id="weather-forecast-date">
-                                Thu
-                            </div>
-                            <div class="weather-forecast-icon">
-                                <img src="https://ssl.gstatic.com/onebox/weather/64/rain_light.png" alt="" width="45px">
-                            </div>
-                            <div class="weather-forecast-temperature">
+            <div class="weather-forecast"id="forecast">
+                <div class="row">
+                    <div class="col-2">
+                        <div id="weather-forecast-date">
+                            Thu
+                        </div>
+                        <div class="weather-forecast-icon">
+                            <img src="https://ssl.gstatic.com/onebox/weather/64/rain_light.png" alt="" width="45px">
+                        </div>
+                        <div class="weather-forecast-temperature">
                                 <span id="weather-forecast-temperature-max">
                                     25°
                                 </span>
                                 <span id="weather-forecast-temperature-min">
                                     18°
                                 </span>
-                            </div>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                </div>
+                
             </div>
         </div>
+
             <div class="footer">
                 This project was coded by Chan Myae Myat Noe San 
                 <span>and is</span> <a
                     href="https://github.com/chanmyae7331/Vanilla-weather--app" target="_blank" rel="noreferrer">open-sourced on
                     Github</a> and <a href="https://exquisite-cendol-8eaab4.netlify.app/">hosted on Netlify</a>
             </div>
+
         </div>
     </div>
     
