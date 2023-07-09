@@ -20,40 +20,50 @@ function formatDate(timestamp){
     let day = days[date.getDay()];
     return `${day} ${hours}:${minutes}`;
 }
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
-function displayForecast(){
+  return days[day];
+}
+
+function displayForecast(response){
+    let forecast = response.data.daily;
+
     let forecastElement = document.querySelector("#forecast");
-
-    let days = ["Mon", "Tue","Wed", "Thurs", "Fri","Sun"];
 
     let forecastHTML = `<div class="row">`;
     
-    days.forEach(function (day) {
+    forecast.forEach(function (forecastDay, index) {
+        if (index < 6) {
+
         forecastHTML= forecastHTML + 
         `  
             <div class="col-2">
                 <div id="weather-forecast-date">
-                    ${day}
+                    ${formatDay(forecastDay.time)}
                 </div>
                 <div class="weather-forecast-icon">
-                    <img src="https://ssl.gstatic.com/onebox/weather/64/rain_light.png" alt="" width="45px">
+                    <img src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png" alt="" width="45"/>
                 </div>
                 <div class="weather-forecast-temperature">
                     <span id="weather-forecast-temperature-max">
-                        25°
+                        ${Math.round(forecastDay.temp.max)}°
                     </span>
                     <span id="weather-forecast-temperature-min">
-                        18°
+                        ${Math.round(forecastDay.temp.min)}°
                     </span>
                 </div>
             </div>
-    ` ;
+        ` ;
+        }
     });
     
     forecastHTML = forecastHTML + `</div>`;
     forecastElement.innerHTML = forecastHTML;
-    console.log(forecastHTML);
-}
+}  
+
 function displayTemperature(response) {
 let temperatureElement= document.querySelector("#temperature");
 let cityElement = document.querySelector("#city");
@@ -62,7 +72,7 @@ let humidityElement = document.querySelector("#humidity");
 let windElement = document.querySelector("#wind");
 let dateElement = document.querySelector("#date");
 let iconElement = document.querySelector("#icon");
-celsiusTemperature= response.data.main.temp;
+let celsiusTemperature= response.data.main.temp;
 
 temperatureElement.innerHTML =Math.round(celsiusTemperature);
 cityElement.innerHTML = response.data.name;
@@ -117,4 +127,3 @@ let fahrenheitLink =document.querySelector("#fahrenheit-link");
  celsiusLink.addEventListener("click", showCelsiusTemperature);
 
  search("Yangon");
-displayForecast();
