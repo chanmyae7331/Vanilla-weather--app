@@ -28,9 +28,9 @@ h1{
     list-style: none;
     margin-bottom: 5px;
 }
-#units {
+.units {
     position: relative;
-    top: -25px;
+    top: -30px;
 }
 #search-input{
         background: rgba(206, 227, 249, 0.464);

@@ -64,6 +64,14 @@ function displayForecast(response){
     forecastElement.innerHTML = forecastHTML;
 }  
 
+function getForecast(coordinates) {
+
+  let apiKey = "037821f5e82fed94604bbc6d80f916c2";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
+}
+
+
 function displayTemperature(response) {
 let temperatureElement= document.querySelector("#temperature");
 let cityElement = document.querySelector("#city");
@@ -82,6 +90,8 @@ windElement.innerHTML = Math.round(response.data.wind.speed);
 dateElement.innerHTML = formatDate(response.data.dt * 1000);
 iconElement.setAttribute("src",`https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 iconElement.setAttribute("alt", response.data.weather[0].description);
+
+getForecast(response.data.coord);
 }
 
 function search(city){
@@ -90,6 +100,7 @@ function search(city){
 
     axios.get(apiUrl).then(displayTemperature);
 }
+
 
 function handleSubmit(event){
     event.preventDefault();
@@ -115,15 +126,8 @@ function showCelsiusTemperature(event) {
     temperatureElement.innerHTML =Math.round(celsiusTemperature);
 }
 
-let celsiusTemperature = null;
-
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
-let fahrenheitLink =document.querySelector("#fahrenheit-link");
- fahrenheitLink.addEventListener("click", showFahrenheitTemperature);
-
- let celsiusLink =document.querySelector("#celsius-link");
- celsiusLink.addEventListener("click", showCelsiusTemperature);
 
  search("Yangon");
